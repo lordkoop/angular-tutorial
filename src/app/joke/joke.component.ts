@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'joke',
   template: `
     <h1>What did the cheese say when it looked in the mirror?</h1>
-    <p>Halloumi</p>
+    <p>Halloumi?</p>
   `
 })
 export class JokeComponent{
