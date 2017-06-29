@@ -12,8 +12,7 @@ import { JokeListComponent } from './joke/jokelist.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: DashboardComponent},
-  {path: 'jokes', component: JokeListComponent},
-  {path: 'joke', component: JokeComponent}
+  {path: 'jokes', component: JokeListComponent}
 ];
 
 @NgModule({

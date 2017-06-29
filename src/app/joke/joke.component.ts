@@ -1,18 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Joke } from "app/joke/models/joke";
 
 @Component({
   selector: 'joke',
-  template: `
-    <h3>{{setup}}</h3>
-    <p>{{punchline}}</p>
-  `
+  templateUrl: './joke.component.html'
 })
 export class JokeComponent{
-  setup: string;
-  punchline: string;
-
-  constructor() {
-    this.setup = "What did the cheese say when it looked in the mirror?";
-    this.punchline = "Halloumi";
-  }
+  @Input('joke') joke: Joke;
 }
