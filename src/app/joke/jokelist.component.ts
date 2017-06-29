@@ -1,26 +1,18 @@
 import { Component } from '@angular/core';
+import {Joke} from './models/joke';
 
 @Component({
     selector: 'joke-list',
     templateUrl: './jokelist.component.html'
 })
 export class JokeListComponent{
-    jokes: Object[];
+    jokes: Joke[];
 
     constructor() {
         this.jokes = [
-            {
-                setup: "What did the cheese say when it looked in the mirror?",
-                punchline: "Hello-Me"
-            },
-            {
-                setup: "What kind of cheese do you use to disguise a small horse?",
-                punchline: "Mask-a-pony"
-            },
-            {
-                setup: "A kid threw a lump of cheddar at me",
-                punchline: "I thought 'That's not very mature'"
-            }
+            new Joke("What did the cheese say when it looked in the mirror?", "Hello-Me"),
+            new Joke("What kind of cheese do you use to disguise a small horse?", "Mask-a-pony"),
+            new Joke("A kid threw a lump of cheddar at me", "I thought 'That's not very mature'")
         ];
     }
 }
